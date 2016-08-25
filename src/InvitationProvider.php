@@ -34,15 +34,6 @@ class InvitationProvider extends ServiceProvider
         $source = realpath(__DIR__ . '/config/invitation.php');
         $this->publishes([$path => config_path('invitation.php')], 'config');
         $this->mergeConfigFrom($path, 'invitation');
-
-        // if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
-        //     $this->publishes([
-        //         $source => config_path('invitation.php')
-        //     ]);
-        // } elseif ($this->app instanceof LumenApplication) {
-        //     $this->app->configure('invitation');
-        // }
-        // $this->mergeConfigFrom($source, 'invitation');
     }
 
 
