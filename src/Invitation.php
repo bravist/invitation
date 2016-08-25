@@ -1,6 +1,6 @@
 <?php
 
-namespace WeiPei\Invitation;
+namespace Bravist\Invitation;
 
 use App\Models\WeipeiActivities\InvitationLetter;
 
