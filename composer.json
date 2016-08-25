@@ -3,12 +3,8 @@
     "description": "Accessories business conference invitation",
     "keywords": ["weipei", "weipeiapp", "invitation", "Accessories"],
     "homepage": "http://chenghuiyong.com",
-    "type": "library",
     "require": {
         "php": ">=5.9"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "~4.3"
     },
     "license": "MIT",
     "authors": [
@@ -17,7 +13,6 @@
             "email": "chenghuiyong1987@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "WeiPei\\Invitation": "src/"
