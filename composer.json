@@ -2,7 +2,6 @@
     "name": "bravist/invitation",
     "description": "Accessories business conference invitation",
     "keywords": ["bravist", "weipeiapp", "invitation", "Accessories"],
-    "homepage": "http://chenghuiyong.com",
     "require": {
         "php": ">=5.9"
     },
@@ -13,9 +12,10 @@
             "email": "chenghuiyong1987@gmail.com"
         }
     ],
+    "minimum-stability" : "dev",
     "autoload": {
         "psr-4": {
-            "WeiPei\\Invitation": "src/"
+            "Bravist\\Invitation": "src/"
         }
     }
 }
