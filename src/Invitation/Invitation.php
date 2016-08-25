@@ -2,9 +2,6 @@
 
 namespace Weipei\Invitation;
 
-use App\Models\WeipeiActivities\Invitation as WeipeiInvitation;
-
-
 /**
  * @author brave <chenghuiyong1987@gmail.com>
  */
