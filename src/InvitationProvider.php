@@ -1,6 +1,6 @@
 <?php
 
-namespace  WeiPei\Invitation;
+namespace  Bravist\Invitation;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -46,7 +46,7 @@ class InvitationProvider extends ServiceProvider
 
     protected function setupMigrations()
     {
-        $source = realpath(__DIR__.'/database/migrations/');
+        $source = realpath(__DIR__.'/migrations');
 
         $this->publishes([$source => database_path('migrations')], 'migrations');
     }
@@ -58,7 +58,7 @@ class InvitationProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(['WeiPei\\Invitation' => 'invitation'], function($app){
+        $this->app->singleton(['Bravist\\Invitation' => 'invitation'], function($app){
             return new Invitation(config('letter'));
         });
     }
