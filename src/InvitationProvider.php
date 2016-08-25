@@ -31,22 +31,24 @@ class InvitationProvider extends ServiceProvider
      */
     protected function setupConfig()
     {
-        $source = realpath(__DIR__ . '/config/config.php');
+        $source = realpath(__DIR__ . '/config/invitation.php');
+        $this->publishes([$path => config_path('invitation.php')], 'config');
+        $this->mergeConfigFrom($path, 'invitation');
 
-        if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
-            $this->publishes([
-                $source => config_path('invitation.php')
-            ]);
-        } elseif ($this->app instanceof LumenApplication) {
-            $this->app->configure('invitation');
-        }
-        $this->mergeConfigFrom($source, 'invitation');
+        // if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
+        //     $this->publishes([
+        //         $source => config_path('invitation.php')
+        //     ]);
+        // } elseif ($this->app instanceof LumenApplication) {
+        //     $this->app->configure('invitation');
+        // }
+        // $this->mergeConfigFrom($source, 'invitation');
     }
 
 
     protected function setupMigrations()
     {
-        $source = realpath(__DIR__.'/migrations');
+        $source = realpath(__DIR__ . "/migrations");
 
         $this->publishes([$source => database_path('migrations')], 'migrations');
     }
