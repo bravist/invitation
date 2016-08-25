@@ -31,7 +31,7 @@ class InvitationProvider extends ServiceProvider
      */
     protected function setupConfig()
     {
-        $source = realpath(__DIR__ . '/config/invitation.php');
+        $path = realpath(__DIR__ . '/config/invitation.php');
         $this->publishes([$path => config_path('invitation.php')], 'config');
         $this->mergeConfigFrom($path, 'invitation');
     }
@@ -54,16 +54,5 @@ class InvitationProvider extends ServiceProvider
         $this->app->singleton(['Bravist\\Invitation' => 'invitation'], function($app){
             return new Invitation(config('letter'));
         });
-    }
-
-
-    /**
-     * 提供的服务
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return ['invitation', 'WeiPei\\Invitation'];
     }
 }
