@@ -1,7 +1,7 @@
 {
-    "name": "weipei/invitation",
+    "name": "bravist/invitation",
     "description": "Accessories business conference invitation",
-    "keywords": ["weipei", "weipeiapp", "invitation", "Accessories"],
+    "keywords": ["bravist", "weipeiapp", "invitation", "Accessories"],
     "homepage": "http://chenghuiyong.com",
     "require": {
         "php": ">=5.9"
