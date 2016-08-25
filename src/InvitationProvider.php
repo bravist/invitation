@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace  WeiPei\Invitation;
 
 use Illuminate\Support\ServiceProvider;
 
