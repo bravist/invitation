@@ -59,7 +59,7 @@ class InvitationProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(['WeiPei\\Invitation' => 'invitation'], function($app){
-            return new Invitation($app->make(\App\Models\WeipeiActivities\InvitationLetter::class));
+            return new Invitation(config('letter'));
         });
     }
 
