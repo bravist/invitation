@@ -45,7 +45,7 @@ class Invitation
     private function isTelephoneExist($telephone)
     {
         if ($this->invitation->where('telephone', $telephone)->first()) {
-            throw new \Exception(sprintf(trans('The telephone %s has exist'), $telephone));
+            throw new \Exception(sprintf(trans('messages.telephone'), $telephone));
         }
     }
 
