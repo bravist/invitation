@@ -1,9 +1,10 @@
 {
     "name": "bravist/invitation",
     "description": "Accessories business conference invitation",
-    "keywords": ["bravist", "weipeiapp", "invitation", "Accessories", "weipei"],
+    "keywords": ["bravist", "weipeiapp", "invitation", "accessories", "weipei"],
+    "homepage": "http://www.chenghuyiong.com",
     "require": {
-        "php": ">=5.9"
+        "php": ">=5.5"
     },
     "license": "MIT",
     "authors": [
