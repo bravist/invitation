@@ -7,13 +7,6 @@ use Illuminate\Support\ServiceProvider;
 class InvitationProvider extends ServiceProvider
 {
     /**
-     * 延迟加载
-     *
-     * @var boolean
-     */
-    protected $defer = true;
-
-    /**
      * Bootstrap the application services.
      *
      * @return void
