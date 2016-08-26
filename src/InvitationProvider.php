@@ -36,7 +36,7 @@ class InvitationProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(['Bravist\\Invitation' => 'invitation'], function($app){
-            return new Invitation(config('invitation.letter'));
+            return new Invitation($app->make(config('invitation.letter')));
         });
     }
 }
