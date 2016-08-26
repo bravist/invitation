@@ -31,15 +31,21 @@ class Invitation
 
     }
 
-    public function get()
+    public function get($sign, $sort, $lastTime = '', $pageSize = 20)
     {
-        return $this->invitation->get();
+        $builder = $this->invitation->orderBy('id', $sort);
+
+        if ($lastTime) {
+            $builder->where('created_at', $sign, $lastTime);
+        }
+
+        return $builder->limit($pageSize)->get();
     }
 
     private function isTelephoneExist($telephone)
     {
         if ($this->invitation->where('telephone', $telephone)->first()) {
-            throw new \Exception(sprintf("The telephone %s has exist", $telephone));
+            throw new \Exception(sprintf(trans('messages.telephone'), $telephone));
         }
     }
 
