@@ -14,7 +14,6 @@ class InvitationProvider extends ServiceProvider
     public function boot()
     {
         $this->setupConfig();
-        $this->setupMigrations();
     }
 
     /**
@@ -27,14 +26,6 @@ class InvitationProvider extends ServiceProvider
         $path = realpath(__DIR__ . '/config/invitation.php');
         $this->publishes([$path => config_path('invitation.php')], 'config');
         $this->mergeConfigFrom($path, 'invitation');
-    }
-
-
-    protected function setupMigrations()
-    {
-        $source = realpath(__DIR__ . "/migrations");
-
-        $this->publishes([$source => database_path('migrations')], 'migrations');
     }
 
     /**
